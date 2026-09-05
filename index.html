@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rajavibe | Online Store</title>
+  <meta name="description" content="Rajavibe — Fashion, consumer electronics and beauty, all in one store.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>🚚 Free Delivery on Orders Over $50</span>
+    <div><span>Track Order</span><i></i><span>Help & Support</span><i></i><span>🇺🇸 USD⌄</span></div>
+  </div>
+
+  <header class="header">
+    <a class="logo" href="#"><span>Rajavibe</span><small>ONLINE STORE</small></a>
+    <div class="search">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="fashion">Fashion</option>
+        <option value="electronics">Electronics</option>
+        <option value="beauty">Beauty</option>
+      </select>
+      <input id="searchInput" placeholder="Search for products, brands and more...">
+      <button id="searchBtn">⌕</button>
+    </div>
+    <div class="actions">
+      <button>♙ <span>Login / Register</span></button>
+      <button id="wishBtn">♡ <span>Wishlist</span></button>
+      <button id="cartBtn">🛒 <span>Cart</span><b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <button class="cat">☰ &nbsp; All Categories</button>
+    <a class="active" href="#home">Home</a>
+    <a href="#fashion">Shop</a>
+    <a href="#fashion">Fashion</a>
+    <a href="#electronics">Electronics</a>
+    <a href="#beauty">Beauty</a>
+    <a href="#brands">Brands</a>
+    <a href="#deals">Deals</a>
+    <a href="#products">New Arrivals</a>
+    <a href="#footer">Blog</a>
+    <a href="#footer">Contact Us</a>
+    <span class="offer">🏷 Exclusive Offers</span>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p>RAJAVIBE COLLECTION</p>
+        <h1>DISCOVER THE<br><em>BEST OF STYLE,</em><br>TECH & BEAUTY</h1>
+        <div>Top brands. Great prices.<br>Endless choices.</div>
+        <button class="primary" onclick="scrollToProducts()">SHOP NOW</button>
+      </div>
+      <img src="rajavibe-hero.png" alt="Rajavibe fashion electronics and beauty collection">
+    </section>
+
+    <section class="categories" id="fashion">
+      <article class="category fashion">
+        <div><small>FASHION</small><h2>Express Your Style</h2><p>Latest clothing, shoes & accessories.</p><a href="#products" onclick="filterCategory('fashion')">SHOP FASHION →</a></div>
+        <span>👗</span>
+      </article>
+      <article class="category electronics" id="electronics">
+        <div><small>ELECTRONICS</small><h2>Smarter Technology<br>Better Living</h2><p>Top electronics & everyday gadgets.</p><a href="#products" onclick="filterCategory('electronics')">SHOP ELECTRONICS →</a></div>
+        <span>💻</span>
+      </article>
+      <article class="category beauty" id="beauty">
+        <div><small>BEAUTY</small><h2>Reveal Your Beauty</h2><p>Premium beauty products for your best self.</p><a href="#products" onclick="filterCategory('beauty')">SHOP BEAUTY →</a></div>
+        <span>💄</span>
+      </article>
+    </section>
+
+    <section class="section" id="brands">
+      <div class="section-head"><h2>TOP BRANDS</h2><a href="#">View All Brands →</a></div>
+      <div class="brands">
+        <span>NIKE</span><span>adidas</span><span>SAMSUNG</span><span>APPLE</span><span>SONY</span>
+        <span>PHILIPS</span><span>L'ORÉAL</span><span>ESTÉE LAUDER</span><span>GUCCI</span><span>CASIO</span>
+      </div>
+    </section>
+
+    <section class="section" id="deals">
+      <div class="section-head"><h2>TRENDING PRODUCTS</h2><div class="tabs"><button class="selected">Featured</button><button>Best Sellers</button><button>New Arrivals</button></div><a href="#products">View All →</a></div>
+      <div id="products" class="products"></div>
+    </section>
+
+    <section class="newsletter">
+      <div><small>RAJAVIBE UPDATES</small><h2>Get the latest deals & new arrivals</h2><p>Sign up for exclusive offers and product news.</p></div>
+      <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Rajavibe!')"><input type="email" required placeholder="Enter your email address"><button class="primary">SUBSCRIBE</button></form>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div><div class="logo"><span>Rajavibe</span><small>ONLINE STORE</small></div><p>Style, technology and beauty — all in one place.</p></div>
+    <div><h4>Shop</h4><a>Fashion</a><a>Electronics</a><a>Beauty</a><a>Deals</a></div>
+    <div><h4>Customer Care</h4><a>Contact Us</a><a>Track Order</a><a>Shipping & Returns</a><a>Help & Support</a></div>
+    <div><h4>Follow Rajavibe</h4><p>Instagram · Facebook · TikTok</p></div>
+  </footer>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
